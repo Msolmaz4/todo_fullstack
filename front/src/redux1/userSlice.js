@@ -12,7 +12,7 @@ export const loginUser = createAsyncThunk(
     async (data, thunkAPI) => {
         console.log(data,"loginuser")
       try {
-        const response = await axios.post(`https://todo-fullstack-snowy.vercel.app/user/login`,data);
+        const response = await axios.post(`http://todo-fullstack-snowy.vercel.app/user/login`,data);
         console.log(response.data,"response")
         return response.data;
       } catch (error) {
@@ -26,7 +26,7 @@ export const registerUser = createAsyncThunk(
     async (data, thunkAPI) => {
         console.log(data,"registeruser")
       try {
-        const response = await axios.post(`https://todo-fullstack-snowy.vercel.app/user/register`,data);
+        const response = await axios.post(`http://todo-fullstack-snowy.vercel.app/user/register`,data);
         return response.data;
       } catch (error) {
         return thunkAPI.rejectWithValue({ error: error.message });

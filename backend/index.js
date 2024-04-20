@@ -3,6 +3,14 @@ const app = express()
 const PORT = 8000
 const cors = require('cors')
 app.use(cors())
+
+app.use(cors({
+    "origin": ["http://localhost:5173","http://localhost:3000"],
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+
+}))
+
+
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 const userRouter = require("./routes/userRouter")

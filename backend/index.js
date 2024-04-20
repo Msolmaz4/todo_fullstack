@@ -5,7 +5,10 @@ const cors = require('cors')
 app.use(cors())
 
 
-
+app.use(cors({
+    origin: 'https://todo-fullstack-y4kx.vercel.app'
+  }));
+  
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 const userRouter = require("./routes/userRouter")

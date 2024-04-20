@@ -9,7 +9,7 @@ export const todos = createAsyncThunk(
     async (todo, thunkAPI) => {
         console.log(todo,"todos")
       try {
-        const response = await axios.post(`https://todo-fullstack-snowy.vercel.app/todos`,todo);
+        const response = await axios.post(`https://backend-todorender.onrender.com/todos`,todo);
         console.log(response.data,"todos")
         return response.data;
       } catch (error) {
@@ -22,7 +22,7 @@ export const todosl = createAsyncThunk(
     async (todo, thunkAPI) => {
         console.log(todo,"todos")
       try {
-        const response = await axios.get(`https://todo-fullstack-snowy.vercel.app/todos`);
+        const response = await axios.get(`https://backend-todorender.onrender.com/todos`);
         console.log(response.data,"todos")
         return response.data;
       } catch (error) {
